@@ -40,7 +40,7 @@
     a { color: inherit; }
 
     .wrap {
-      max-width: 960px;
+      max-width: 1200px;
       min-height: 100vh;
       margin: 0 auto;
       padding: 51px 56px 36px;
@@ -85,24 +85,7 @@
       gap: 18px;
     }
 
-    .clock {
-      font-weight: 500;
-      font-size: 13px;
-      letter-spacing: 0.04em;
-      color: var(--ink);
-      display: inline-flex;
-      align-items: baseline;
-      gap: 8px;
-      font-variant-numeric: tabular-nums;
-    }
-    .clock-tz {
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      color: var(--muted);
-      text-transform: uppercase;
-    }
-
-    .theme-btn {
+.theme-btn {
       width: 28px;
       height: 28px;
       padding: 0;
@@ -207,10 +190,6 @@
         <span class="logo-name">Nordic Apps</span>
       </a>
       <div class="header-right">
-        <div class="clock">
-          <span id="clock-time">— —</span>
-          <span class="clock-tz">CET</span>
-        </div>
         <button class="theme-btn" id="theme-btn" aria-label="Switch to dark mode">
           <!-- Moon icon (shown in light mode) -->
           <svg id="icon-moon" width="14" height="14" viewBox="0 0 16 16" fill="none">
@@ -280,20 +259,6 @@
       });
     })();
 
-    // CET clock
-    (function () {
-      var fmt = new Intl.DateTimeFormat('en-GB', {
-        timeZone: 'Europe/Copenhagen',
-        hour: '2-digit', minute: '2-digit', hour12: false
-      });
-      function update() {
-        var parts = fmt.format(new Date()).split(':');
-        var el = document.getElementById('clock-time');
-        if (el) el.textContent = parts[0] + ' ' + parts[1];
-      }
-      update();
-      setInterval(update, 15000);
-    })();
   </script>
 </body>
 </html>
