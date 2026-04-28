@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nordic Apps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:       #f1efe7;
+      --ink:      #14181a;
+      --muted:    rgba(20, 24, 26, 0.55);
+      --hairline: rgba(20, 24, 26, 0.12);
+      --accent:   #1a8754;
+    }
+    [data-theme="dark"] {
+      --bg:       #0b100d;
+      --ink:      #f1efe7;
+      --muted:    rgba(241, 239, 231, 0.58);
+      --hairline: rgba(241, 239, 231, 0.12);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body {
+      margin: 0; padding: 0; height: 100%;
+    }
+
+    body {
+      font-family: 'Geist', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: "ss01";
+      transition: background 0.2s, color 0.2s;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      max-width: 960px;
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 51px 56px 36px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    /* ── Header ── */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--ink);
+      white-space: nowrap;
+      line-height: 1;
+    }
+    .logo-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .logo-name {
+      font-weight: 600;
+      font-size: 26px;
+      letter-spacing: -0.015em;
+      line-height: 1;
+    }
+
+    .header-right {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .clock {
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+      font-variant-numeric: tabular-nums;
+    }
+    .clock-tz {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .theme-btn {
+      width: 28px;
+      height: 28px;
+      padding: 0;
+      border-radius: 50%;
+      border: 1px solid var(--hairline);
+      background: transparent;
+      color: var(--ink);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .theme-btn:hover {
+      border-color: var(--muted);
+    }
+
+    /* ── Main ── */
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 880px;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .eyebrow-rule {
+      display: inline-block;
+      width: 22px;
+      height: 1px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: 500;
+      font-size: 56px;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      color: var(--ink);
+      max-width: 820px;
+    }
+    h1 .muted {
+      color: var(--muted);
+    }
+
+    .lede {
+      margin: 32px 0 0;
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--muted);
+      max-width: 560px;
+    }
+    .lede a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    /* ── Footer ── */
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 24px;
+      border-top: 1px solid var(--hairline);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 720px) {
+      .wrap { padding: 28px 24px 36px; }
+      h1 { font-size: 38px; }
+      .logo-name { font-size: 22px; }
+      footer { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="logo" href="/">
+        <span class="logo-dot"></span>
+        <span class="logo-name">Nordic Apps</span>
+      </a>
+      <div class="header-right">
+        <div class="clock">
+          <span id="clock-time">— —</span>
+          <span class="clock-tz">CET</span>
+        </div>
+        <button class="theme-btn" id="theme-btn" aria-label="Switch to dark mode">
+          <!-- Moon icon (shown in light mode) -->
+          <svg id="icon-moon" width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M13 9.5A5.5 5.5 0 1 1 6.5 3a4.5 4.5 0 0 0 6.5 6.5z" fill="currentColor"/>
+          </svg>
+          <!-- Sun icon (shown in dark mode) -->
+          <svg id="icon-sun" width="14" height="14" viewBox="0 0 16 16" fill="none" style="display:none">
+            <circle cx="8" cy="8" r="3" fill="currentColor"/>
+            <line x1="8" y1="1.5" x2="8" y2="3.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="8" y1="12.8" x2="8" y2="14.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="1.5" y1="8" x2="3.2" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="12.8" y1="8" x2="14.5" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="3.4" y1="3.4" x2="4.6" y2="4.6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="11.4" y1="11.4" x2="12.6" y2="12.6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="12.6" y1="3.4" x2="11.4" y2="4.6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="4.6" y1="11.4" x2="3.4" y2="12.6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="eyebrow">
+        <span class="eyebrow-rule"></span>
+        The Shopify app agency
+      </div>
+      <h1>
+        We build custom apps, public apps, and themes on Shopify.
+        <span class="muted">Mostly for clients who found us through someone else.</span>
+      </h1>
+      <p class="lede">
+        Shopify Partners since 2014. A proper site is coming. If you've made it this far, you probably have a reason — say hello at <a href="mailto:support@nordicapps.com">support@nordicapps.com</a>
+      </p>
+    </main>
+
+    <footer>
+      <span>© Nordic Apps</span>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span>Copenhagen, Denmark</span>
+    </footer>
+  </div>
+
+  <script>
+    // Dark mode
+    (function () {
+      var html = document.documentElement;
+      var btn = document.getElementById('theme-btn');
+      var iconMoon = document.getElementById('icon-moon');
+      var iconSun = document.getElementById('icon-sun');
+
+      function setTheme(dark) {
+        html.dataset.theme = dark ? 'dark' : 'light';
+        btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+        iconMoon.style.display = dark ? 'none' : '';
+        iconSun.style.display = dark ? '' : 'none';
+        try { localStorage.setItem('na-theme', dark ? 'dark' : 'light'); } catch(e) {}
+      }
+
+      // Init from stored pref or system pref
+      var stored = null;
+      try { stored = localStorage.getItem('na-theme'); } catch(e) {}
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(stored ? stored === 'dark' : prefersDark);
+
+      btn.addEventListener('click', function () {
+        setTheme(html.dataset.theme !== 'dark');
+      });
+    })();
+
+    // CET clock
+    (function () {
+      var fmt = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Europe/Copenhagen',
+        hour: '2-digit', minute: '2-digit', hour12: false
+      });
+      function update() {
+        var parts = fmt.format(new Date()).split(':');
+        var el = document.getElementById('clock-time');
+        if (el) el.textContent = parts[0] + ' ' + parts[1];
+      }
+      update();
+      setInterval(update, 15000);
+    })();
+  </script>
+</body>
+</html>

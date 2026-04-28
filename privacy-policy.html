@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nordic Apps — Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:       #f1efe7;
+      --ink:      #14181a;
+      --muted:    rgba(20, 24, 26, 0.55);
+      --muted-78: rgba(20, 24, 26, 0.78);
+      --hairline: rgba(20, 24, 26, 0.12);
+      --accent:   #1a8754;
+    }
+    [data-theme="dark"] {
+      --bg:       #0b100d;
+      --ink:      #f1efe7;
+      --muted:    rgba(241, 239, 231, 0.58);
+      --muted-78: rgba(241, 239, 231, 0.78);
+      --hairline: rgba(241, 239, 231, 0.12);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html, body {
+      margin: 0; padding: 0; min-height: 100%;
+    }
+
+    body {
+      font-family: 'Geist', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: "ss01";
+      transition: background 0.2s, color 0.2s;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 51px 56px 96px;
+    }
+
+    /* ── Header ── */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 96px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--ink);
+      white-space: nowrap;
+      line-height: 1;
+    }
+    .logo-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .logo-name {
+      font-weight: 600;
+      font-size: 26px;
+      letter-spacing: -0.015em;
+      line-height: 1;
+    }
+
+    .header-center {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+    .clock-tz {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .header-right {
+      display: inline-flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .nav-link {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid var(--hairline);
+      padding-bottom: 1px;
+    }
+
+    .theme-btn {
+      width: 28px;
+      height: 28px;
+      padding: 0;
+      border-radius: 50%;
+      border: 1px solid var(--hairline);
+      background: transparent;
+      color: var(--ink);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .theme-btn:hover { border-color: var(--muted); }
+
+    /* ── Eyebrow ── */
+    .eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .eyebrow-rule {
+      display: inline-block;
+      width: 22px;
+      height: 1px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ── Title ── */
+    h1 {
+      margin: 0 0 32px;
+      font-weight: 500;
+      font-size: 56px;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+      max-width: 820px;
+    }
+
+    /* ── Lede ── */
+    .lede {
+      max-width: 720px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--muted-78);
+      margin: 0 0 64px;
+    }
+    .lede a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    /* ── Body ── */
+    .body { max-width: 720px; }
+
+    .body h2 {
+      margin: 56px 0 16px;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    .body h2:first-child { margin-top: 0; }
+
+    .body p {
+      margin: 0 0 16px;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--muted-78);
+    }
+    .body a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(20, 24, 26, 0.2);
+    }
+    [data-theme="dark"] .body a {
+      border-bottom-color: rgba(241, 239, 231, 0.2);
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 120px;
+      padding-top: 24px;
+      border-top: 1px solid var(--hairline);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 720px) {
+      .wrap { padding: 28px 24px 72px; }
+      header { margin-bottom: 64px; }
+      h1 { font-size: 40px; }
+      .lede { font-size: 16px; margin-bottom: 48px; }
+      footer { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .header-center { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="logo" href="index.html">
+        <span class="logo-dot"></span>
+        <span class="logo-name">Nordic Apps</span>
+      </a>
+      <div class="header-center">
+        <span id="clock-time">— —</span>
+        <span class="clock-tz">CET</span>
+      </div>
+      <div class="header-right">
+        <a class="nav-link" href="index.html">Back to home</a>
+        <button class="theme-btn" id="theme-btn" aria-label="Switch to dark mode">
+          <svg id="icon-moon" width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M13 9.5A5.5 5.5 0 1 1 6.5 3a4.5 4.5 0 0 0 6.5 6.5z" fill="currentColor"/>
+          </svg>
+          <svg id="icon-sun" width="14" height="14" viewBox="0 0 16 16" fill="none" style="display:none">
+            <circle cx="8" cy="8" r="3" fill="currentColor"/>
+            <line x1="8" y1="1.5" x2="8" y2="3.2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="8" y1="12.8" x2="8" y2="14.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="1.5" y1="8" x2="3.2" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="12.8" y1="8" x2="14.5" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="3.4" y1="3.4" x2="4.6" y2="4.6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="11.4" y1="11.4" x2="12.6" y2="12.6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="12.6" y1="3.4" x2="11.4" y2="4.6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="4.6" y1="11.4" x2="3.4" y2="12.6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="eyebrow">
+      <span class="eyebrow-rule"></span>
+      Legal
+    </div>
+
+    <h1>Privacy policy.</h1>
+
+    <p class="lede">
+      Nordic Apps ("we," "us," or "our") operates
+      <a href="https://www.nordic-apps.com">nordic-apps.com</a> and its associated
+      Shopify apps — Checkout&nbsp;Flow, Nordic: Custom payment &amp; delivery,
+      and NA&nbsp;Side Cart. This page outlines how we collect, use and disclose
+      personal information when you use the Service. Except as detailed below,
+      we do not share your information with anyone else.
+    </p>
+
+    <div class="body">
+      <p>
+        We use your personal information to provide and improve the Service. By
+        using the Service, you agree to the collection and use of information in
+        accordance with this policy. Unless otherwise defined here, terms used in
+        this Privacy Policy carry the same meanings as in our Terms and Conditions.
+      </p>
+
+      <h2>Information collection and usage</h2>
+      <p>
+        While using our Service, we may request certain personally identifiable
+        information that can be used to contact or identify you. This may include
+        your email address and other details ("personal information").
+      </p>
+
+      <h2>Log data</h2>
+      <p>
+        We gather information ("log data") that your browser sends when you access
+        our Service. Log data may include your computer's IP address, browser type
+        and version, the pages you visit, the time and date of your visit, the
+        time spent on those pages, and other related statistics.
+      </p>
+      <p>
+        We may use third-party services such as Google Analytics to collect,
+        monitor and analyse this data to improve the Service. These third-party
+        providers maintain their own privacy policies governing how they use such
+        information.
+      </p>
+
+      <h2>Cookies</h2>
+      <p>
+        Cookies are small data files, sometimes containing an anonymous unique
+        identifier, sent to your browser from a website and stored on your device.
+        We use cookies to gather information. You can set your browser to decline
+        all cookies or to alert you when one is being sent — but if you reject
+        cookies, parts of our Service may become inaccessible.
+      </p>
+
+      <h2>Service providers</h2>
+      <p>
+        We may engage third-party companies and individuals to facilitate, provide
+        or analyse the use of our Service. These parties are granted access to
+        your personal information solely to perform tasks on our behalf, and are
+        bound not to disclose or use it for any other purpose.
+      </p>
+
+      <h2>Communication</h2>
+      <p>
+        We may use your personal information to contact you with newsletters,
+        marketing materials, promotions and other relevant information. You can
+        opt out at any time using the unsubscribe link or the instructions included
+        in any email we send.
+      </p>
+
+      <h2>Security</h2>
+      <p>
+        The security of your personal information is a priority. However, no
+        method of transmission over the internet or electronic storage is
+        completely secure. While we strive to use commercially reasonable means
+        to protect your personal information, we cannot guarantee its absolute
+        security.
+      </p>
+
+      <h2>International data transfer</h2>
+      <p>
+        Your information, including personal information, may be transferred to
+        and maintained on computers located outside of your jurisdiction, in
+        regions with different data-protection rules from your own. By accepting
+        this Privacy Policy and submitting such information, you consent to that
+        transfer.
+      </p>
+
+      <h2>Links</h2>
+      <p>
+        Our Service may include links to external sites we don't operate. Clicking
+        a third-party link will take you to that site. We strongly recommend
+        reviewing the privacy policy of any site you visit. We have no control
+        over, and no responsibility for, the content, privacy policies or
+        practices of any third-party sites or services.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about this policy?
+        Email <a href="mailto:support@nordicapps.com">support@nordicapps.com</a>.
+      </p>
+    </div>
+
+    <footer>
+      <span>© Nordic Apps</span>
+      <span>Copenhagen, Denmark</span>
+    </footer>
+  </div>
+
+  <script>
+    // Dark mode — shared with landing page via localStorage
+    (function () {
+      var html = document.documentElement;
+      var btn = document.getElementById('theme-btn');
+      var iconMoon = document.getElementById('icon-moon');
+      var iconSun = document.getElementById('icon-sun');
+
+      function setTheme(dark) {
+        html.dataset.theme = dark ? 'dark' : 'light';
+        btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+        iconMoon.style.display = dark ? 'none' : '';
+        iconSun.style.display = dark ? '' : 'none';
+        try { localStorage.setItem('na-theme', dark ? 'dark' : 'light'); } catch(e) {}
+      }
+
+      var stored = null;
+      try { stored = localStorage.getItem('na-theme'); } catch(e) {}
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(stored ? stored === 'dark' : prefersDark);
+
+      btn.addEventListener('click', function () {
+        setTheme(html.dataset.theme !== 'dark');
+      });
+    })();
+
+    // CET clock
+    (function () {
+      var fmt = new Intl.DateTimeFormat('en-GB', {
+        timeZone: 'Europe/Copenhagen',
+        hour: '2-digit', minute: '2-digit', hour12: false
+      });
+      function update() {
+        var parts = fmt.format(new Date()).split(':');
+        var el = document.getElementById('clock-time');
+        if (el) el.textContent = parts[0] + ' ' + parts[1];
+      }
+      update();
+      setInterval(update, 15000);
+    })();
+  </script>
+</body>
+</html>
