@@ -203,7 +203,7 @@
         <span class="muted">Mostly for clients who found us through someone else.</span>
       </h1>
       <p class="lede">
-        Shopify Partners since 2014. If you've made it this far, you probably have a reason - here's what you're looking for, just reach out at <a href="mailto:support@nordicapps.com">support@nordicapps.com</a>
+        Shopify Partners since 2014. If you've made it this far, you probably have a reason&nbsp;-&nbsp;here's what you're looking for, just reach out at <a href="mailto:support@nordicapps.com">support@nordicapps.com</a>
       </p>
     </main>
 
@@ -214,48 +214,7 @@
     </footer>
   </div>
 
-  <!-- Cursor dot -->
-  <div id="cursor-dot"></div>
-  <style>
-    #cursor-dot {
-      position: fixed;
-      top: 0; left: 0;
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: #1a8754;
-      opacity: 1;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      transition: opacity 0.3s;
-      z-index: 9999;
-    }
-  </style>
-
   <script>
-    // Cursor dot
-    (function () {
-      var dot = document.getElementById('cursor-dot');
-      var x = 0, y = 0;
-      var dx = 0, dy = 0;
-      var visible = false;
-
-      document.addEventListener('mousemove', function (e) {
-        x = e.clientX; y = e.clientY;
-        if (!visible) { dx = x; dy = y; visible = true; dot.style.opacity = '1'; }
-      });
-      document.addEventListener('mouseleave', function () {
-        dot.style.opacity = '0';
-      });
-
-      (function loop() {
-        dx += (x - dx) * 0.18;
-        dy += (y - dy) * 0.18;
-        dot.style.left = dx + 'px';
-        dot.style.top  = dy + 'px';
-        requestAnimationFrame(loop);
-      })();
-    })();
-
     // Dark mode
     (function () {
       var html = document.documentElement;
